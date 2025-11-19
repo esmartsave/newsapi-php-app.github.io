@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/newsapi.php';
 
-// Decide what to do based on GET parameters
+// Decide what to do based on GET params
 $action = $_GET['action'] ?? 'headlines'; // default: show headlines
 $query = trim($_GET['q'] ?? '');
 
@@ -43,14 +43,14 @@ if ($action === 'search' && $query !== '') {
 <body class="bg-light">
 <div class="container py-4">
 
-    <h1 class="mb-4">Browse the news</h1>
+    <h1 class="mb-4">News Browser</h1>
 
     <!-- Controls -->
     <form class="card mb-4 p-3" method="get" action="index.php">
         <div class="row g-2 align-items-center">
             <div class="col-md-4">
                 <button type="submit" name="action" value="headlines" class="btn btn-primary w-100">
-                    Showing the current headlines
+                    Show Current Headlines
                 </button>
             </div>
             <div class="col-md-4">
@@ -64,7 +64,7 @@ if ($action === 'search' && $query !== '') {
             </div>
             <div class="col-md-4">
                 <button type="submit" name="action" value="search" class="btn btn-outline-secondary w-100">
-                    Search news here
+                    Search News
                 </button>
             </div>
         </div>
@@ -121,7 +121,7 @@ if ($action === 'search' && $query !== '') {
                                 rel="noopener noreferrer"
                                 class="btn btn-sm btn-primary mt-2"
                             >
-                                Read the full article here
+                                Read full article
                             </a>
                         <?php endif; ?>
                     </div>
