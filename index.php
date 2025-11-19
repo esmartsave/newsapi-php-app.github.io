@@ -43,14 +43,14 @@ if ($action === 'search' && $query !== '') {
 <body class="bg-light">
 <div class="container py-4">
 
-    <h1 class="mb-4">News Browser</h1>
+    <h1 class="mb-4">Browse the news</h1>
 
     <!-- Controls -->
     <form class="card mb-4 p-3" method="get" action="index.php">
         <div class="row g-2 align-items-center">
             <div class="col-md-4">
                 <button type="submit" name="action" value="headlines" class="btn btn-primary w-100">
-                    Show Current Headlines
+                    Showing the current headlines
                 </button>
             </div>
             <div class="col-md-4">
@@ -64,7 +64,7 @@ if ($action === 'search' && $query !== '') {
             </div>
             <div class="col-md-4">
                 <button type="submit" name="action" value="search" class="btn btn-outline-secondary w-100">
-                    Search News
+                    Search news here
                 </button>
             </div>
         </div>
@@ -121,7 +121,7 @@ if ($action === 'search' && $query !== '') {
                                 rel="noopener noreferrer"
                                 class="btn btn-sm btn-primary mt-2"
                             >
-                                Read full article
+                                Read the full article here
                             </a>
                         <?php endif; ?>
                     </div>
