@@ -15,6 +15,7 @@ function callNewsApi(string $endpoint, array $params = []): array {
         CURLOPT_URL => $url,
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_HTTPHEADER => [
+            /**'X-Api-Key: ' . NEWS_API_KEY**/
             'X-Api-Key: ' . NEWS_API_KEY,
             'User-Agent: MyNewsApp/1.0'
         ],
