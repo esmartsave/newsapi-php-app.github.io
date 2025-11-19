@@ -14,7 +14,7 @@ if ($action === 'search' && $query !== '') {
     $result = searchNews($query, 'en');
     if (($result['status'] ?? '') === 'ok') {
         $articles = $result['articles'];
-        $title = "Search results for: " . htmlspecialchars($query);
+        $title = "Search for  results: " . htmlspecialchars($query);
     } else {
         $error = $result['message'] ?? 'Unknown error from NewsAPI.';
     }
@@ -43,7 +43,7 @@ if ($action === 'search' && $query !== '') {
 <body class="bg-light">
 <div class="container py-4">
 
-    <h1 class="mb-4">News Browser</h1>
+    <h1 class="mb-4">Browser for news </h1>
 
     <!-- Controls -->
     <form class="card mb-4 p-3" method="get" action="index.php">
@@ -59,7 +59,7 @@ if ($action === 'search' && $query !== '') {
                     name="q"
                     value="<?php echo htmlspecialchars($query); ?>"
                     class="form-control"
-                    placeholder="Search news (e.g. bitcoin, sports)..."
+                    placeholder="Search for the news (e.g. bitcoin, sports)..."
                 >
             </div>
             <div class="col-md-4">
@@ -82,7 +82,7 @@ if ($action === 'search' && $query !== '') {
     <!-- Results -->
     <div class="row g-3">
         <?php if (!$error && empty($articles)): ?>
-            <p>No articles found.</p>
+            <p>sorry, No articles found.</p>
         <?php endif; ?>
 
         <?php foreach ($articles as $article): ?>
